@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ShoppingBuddy.BLL.Services.ShoppersService;
+using ShoppingBuddy.BLL.Services.ShoppingItemsService;
 using ShoppingBuddy.DAL;
 using ShoppingBuddy.DAL.Repositories.UnitOfWork;
 
@@ -10,6 +11,7 @@ builder.Services.AddDbContext<DatabaseContext>(options => options.UseMySql(build
 // Add services to the container.
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IShoppersService, ShoppersService>();
+builder.Services.AddScoped<IShoppingItemsService, ShoppingItemsService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -26,6 +28,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
 
 app.UseAuthorization();
 
