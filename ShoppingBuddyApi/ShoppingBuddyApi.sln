@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingBuddy.API", "ShoppingBuddy.API\ShoppingBuddy.API.csproj", "{101DB529-887E-4E8C-86EC-E7551F9684D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingBuddy.BLL", "ShoppingBuddy.BLL\ShoppingBuddy.BLL.csproj", "{7C3A27B8-1AEA-4E58-90E1-CBDB4777AE50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingBuddy.DAL", "ShoppingBuddy.DAL\ShoppingBuddy.DAL.csproj", "{3DA32DA7-1C40-431C-83A8-F9A8B7F61A9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{101DB529-887E-4E8C-86EC-E7551F9684D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{101DB529-887E-4E8C-86EC-E7551F9684D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{101DB529-887E-4E8C-86EC-E7551F9684D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{101DB529-887E-4E8C-86EC-E7551F9684D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3A27B8-1AEA-4E58-90E1-CBDB4777AE50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3A27B8-1AEA-4E58-90E1-CBDB4777AE50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3A27B8-1AEA-4E58-90E1-CBDB4777AE50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3A27B8-1AEA-4E58-90E1-CBDB4777AE50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DA32DA7-1C40-431C-83A8-F9A8B7F61A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DA32DA7-1C40-431C-83A8-F9A8B7F61A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DA32DA7-1C40-431C-83A8-F9A8B7F61A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DA32DA7-1C40-431C-83A8-F9A8B7F61A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
