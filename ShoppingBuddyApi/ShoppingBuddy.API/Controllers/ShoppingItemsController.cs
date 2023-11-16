@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using ShoppingBuddy.BLL.DTOs.ShoppingItem;
 using ShoppingBuddy.BLL.Services.ShoppingItemsService;
-using ShoppingBuddy.DAL.Entities;
 
 namespace ShoppingBuddy.API.Controllers
 {
@@ -16,7 +16,7 @@ namespace ShoppingBuddy.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<ShoppingItem>>> GetAll()
+        public async Task<ActionResult<List<ShoppingItemResponseDto>>> GetAll()
         {
             var allShoppingItems = await _shoppingItemsService.GetAllShoppingItems();
             return Ok(allShoppingItems);

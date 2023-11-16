@@ -1,3 +1,5 @@
+using AutoMapper;
+using ShoppingBuddy.BLL.DTOs.ShoppingItem;
 using ShoppingBuddy.DAL.Entities;
 using ShoppingBuddy.DAL.Repositories.UnitOfWork;
 
@@ -6,15 +8,18 @@ namespace ShoppingBuddy.BLL.Services.ShoppingItemsService
     public class ShoppingItemsService : IShoppingItemsService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public ShoppingItemsService(IUnitOfWork unitOfWork)
+        public ShoppingItemsService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
-        public async Task<List<ShoppingItem>> GetAllShoppingItems()
+        public async Task<List<ShoppingItemResponseDto>> GetAllShoppingItems()
         {
-            return await _unitOfWork.ShoppingItemRepository.GetAllShoppingItems();
+            var allShoppingItems = await _unitOfWork.ShoppingItemRepository.GetAllShoppingItems();
+            return _mapper.Map<List<ShoppingItemResponseDto>>(allShoppingItems);
         }
     }
 }
