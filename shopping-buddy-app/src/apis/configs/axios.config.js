@@ -1,5 +1,5 @@
 import axios from "axios";
-import environment from "../../config/environment";
+import environment from "../../configs/environment";
 
 export const api = axios.create({
   baseURL: `${environment.shoppingBuddyApi.domain}/api/v1`,

@@ -1,4 +1,4 @@
-import { api } from "./config/axios.config";
+import { api } from "./configs/axios.config";
 
 export const ShoppingItemsApi = {
   getAll: async function () {
