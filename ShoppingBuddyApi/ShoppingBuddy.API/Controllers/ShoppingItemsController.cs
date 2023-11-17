@@ -5,7 +5,7 @@ using ShoppingBuddy.BLL.Services.ShoppingItemsService;
 namespace ShoppingBuddy.API.Controllers
 {
     [ApiController]
-    [Route("api/shopping-items")]
+    [Route("api/v1/shopping-items")]
     public class ShoppingItemsController : ControllerBase
     {
         private readonly IShoppingItemsService _shoppingItemsService;

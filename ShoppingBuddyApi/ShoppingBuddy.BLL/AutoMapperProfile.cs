@@ -11,6 +11,7 @@ namespace ShoppingBuddy.BLL
         {
             CreateMap<Shopper, ShopperResponseDto>();
             CreateMap<ShoppingItem, ShoppingItemResponseDto>();
+            CreateMap<ShoppingItem, ShoppingListItemResponseDto>();
         }
     }
 }

@@ -4,6 +4,8 @@ namespace ShoppingBuddy.DAL.Repositories.ShopperRepository
 {
     public interface IShopperRepository
     {
-        Task<List<Shopper>> GetAllShoppers();
+        Task<List<Shopper>> GetAll();
+
+        Task<Shopper?> GetById(int id);
     }
 }

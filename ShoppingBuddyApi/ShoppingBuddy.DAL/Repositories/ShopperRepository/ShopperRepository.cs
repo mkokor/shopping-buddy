@@ -7,13 +7,20 @@ namespace ShoppingBuddy.DAL.Repositories.ShopperRepository
     {
         private readonly DatabaseContext _databaseContext;
 
-        public ShopperRepository(DatabaseContext databaseContext) {
+        public ShopperRepository(DatabaseContext databaseContext)
+        {
             _databaseContext = databaseContext;
         }
 
-        public async Task<List<Shopper>> GetAllShoppers()
+        public async Task<List<Shopper>> GetAll()
         {
             return await _databaseContext.Shoppers.ToListAsync();
+        }
+
+        public async Task<Shopper?> GetById(int id)
+        {
+            var shopper = await _databaseContext.Shoppers.FindAsync(id);
+            return shopper;
         }
     }
 }

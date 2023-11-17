@@ -12,9 +12,14 @@ namespace ShoppingBuddy.DAL.Repositories.ShoppingItemRepository
             _databaseContext = databaseContext;
         }
 
-        public async Task<List<ShoppingItem>> GetAllShoppingItems()
+        public async Task<List<ShoppingItem>> GetAll()
         {
             return await _databaseContext.ShoppingItems.ToListAsync();
+        }
+
+        public async Task<ShoppingItem?> GetById(int id)
+        {
+            return await _databaseContext.ShoppingItems.FindAsync(id);
         }
     }
 }

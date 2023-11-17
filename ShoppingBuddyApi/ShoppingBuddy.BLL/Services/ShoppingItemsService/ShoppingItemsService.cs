@@ -1,6 +1,5 @@
 using AutoMapper;
 using ShoppingBuddy.BLL.DTOs.ShoppingItem;
-using ShoppingBuddy.DAL.Entities;
 using ShoppingBuddy.DAL.Repositories.UnitOfWork;
 
 namespace ShoppingBuddy.BLL.Services.ShoppingItemsService
@@ -18,7 +17,7 @@ namespace ShoppingBuddy.BLL.Services.ShoppingItemsService
 
         public async Task<List<ShoppingItemResponseDto>> GetAllShoppingItems()
         {
-            var allShoppingItems = await _unitOfWork.ShoppingItemRepository.GetAllShoppingItems();
+            var allShoppingItems = await _unitOfWork.ShoppingItemRepository.GetAll();
             return _mapper.Map<List<ShoppingItemResponseDto>>(allShoppingItems);
         }
     }

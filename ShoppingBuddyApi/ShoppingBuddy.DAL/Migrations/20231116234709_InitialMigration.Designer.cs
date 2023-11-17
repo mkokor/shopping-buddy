@@ -10,7 +10,7 @@ using ShoppingBuddy.DAL;
 namespace ShoppingBuddy.DAL.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20231116213709_InitialMigration")]
+    [Migration("20231116234709_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -33,6 +33,11 @@ namespace ShoppingBuddy.DAL.Migrations
                         .HasColumnType("longtext")
                         .HasColumnName("first_name");
 
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("image");
+
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("longtext")
@@ -47,30 +52,35 @@ namespace ShoppingBuddy.DAL.Migrations
                         {
                             Id = 1,
                             FirstName = "John",
+                            Image = "/images/shoppers/placeholder.png",
                             LastName = "Doe"
                         },
                         new
                         {
                             Id = 2,
                             FirstName = "Emily",
+                            Image = "/images/shoppers/placeholder.png",
                             LastName = "Johnson"
                         },
                         new
                         {
                             Id = 3,
                             FirstName = "Benjamin",
+                            Image = "/images/shoppers/placeholder.png",
                             LastName = "Smith"
                         },
                         new
                         {
                             Id = 4,
                             FirstName = "Ava",
+                            Image = "/images/shoppers/placeholder.png",
                             LastName = "Williams"
                         },
                         new
                         {
                             Id = 5,
                             FirstName = "Olivia",
+                            Image = "/images/shoppers/placeholder.png",
                             LastName = "Davis"
                         });
                 });
@@ -82,13 +92,10 @@ namespace ShoppingBuddy.DAL.Migrations
                         .HasColumnType("int")
                         .HasColumnName("id");
 
-                    b.Property<bool>("Avilable")
-                        .HasColumnType("tinyint(1)")
-                        .HasColumnName("available");
-
                     b.Property<string>("Image")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("longtext")
+                        .HasColumnName("image");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -103,38 +110,76 @@ namespace ShoppingBuddy.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            Avilable = true,
                             Image = "/images/shopping-items/milk.png",
                             Title = "Milk"
                         },
                         new
                         {
                             Id = 2,
-                            Avilable = true,
                             Image = "/images/shopping-items/apple-juice.png",
                             Title = "Apple juice"
                         },
                         new
                         {
                             Id = 3,
-                            Avilable = true,
                             Image = "/images/shopping-items/chocolate.png",
                             Title = "Chocolate"
                         },
                         new
                         {
                             Id = 4,
-                            Avilable = true,
                             Image = "/images/shopping-items/chips.png",
                             Title = "Chips"
                         },
                         new
                         {
                             Id = 5,
-                            Avilable = true,
                             Image = "/images/shopping-items/bread.png",
                             Title = "Bread"
                         });
+                });
+
+            modelBuilder.Entity("ShoppingBuddy.DAL.Entities.ShoppingListItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id");
+
+                    b.Property<int>("ShopperId")
+                        .HasColumnType("int")
+                        .HasColumnName("shopper_id");
+
+                    b.Property<int>("ShoppingItemId")
+                        .HasColumnType("int")
+                        .HasColumnName("shopping_item_id");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ShopperId");
+
+                    b.HasIndex("ShoppingItemId");
+
+                    b.ToTable("shopping_list_items", (string)null);
+                });
+
+            modelBuilder.Entity("ShoppingBuddy.DAL.Entities.ShoppingListItem", b =>
+                {
+                    b.HasOne("ShoppingBuddy.DAL.Entities.Shopper", "Shopper")
+                        .WithMany()
+                        .HasForeignKey("ShopperId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ShoppingBuddy.DAL.Entities.ShoppingItem", "ShoppingItem")
+                        .WithMany()
+                        .HasForeignKey("ShoppingItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Shopper");
+
+                    b.Navigation("ShoppingItem");
                 });
 #pragma warning restore 612, 618
         }
