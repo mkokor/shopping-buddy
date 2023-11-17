@@ -1,12 +1,14 @@
 import { api } from "./configs/axios.config";
 
-export const ShoppersApi = {
-  getAll: async function () {
-    const response = await api.request({
-      url: "/shoppers",
-      method: "GET",
-    });
+const getAll = async () => {
+  const response = await api.request({
+    url: "/shoppers",
+    method: "GET",
+  });
 
-    return response.data;
-  },
+  return response.data;
+};
+
+export const ShoppersApi = {
+  getAll: getAll,
 };
