@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { ShopperCard } from "../shopper-card/ShopperCard";
 import { ShoppingList } from "../shopping-list/ShoppingList";
 import { SelectedShopperContext } from "../../contexts/selected-shopper.context";
+import { images } from "../../constants";
 
 export const ShoppersContainer = ({ shoppers }) => {
   const { selectedShopper, setSelectedShopper } = useContext(
@@ -21,7 +22,7 @@ export const ShoppersContainer = ({ shoppers }) => {
         ))}
       </div>
       <div className="shoppers-container__shopping-list-button">
-        <img src="/images/cart.png" />
+        <img src={images.cart} alt="shopping_list" />
       </div>
       {false && (
         <div className="shoppers-container__shopping-list">
