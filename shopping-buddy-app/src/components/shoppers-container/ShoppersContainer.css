@@ -11,6 +11,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   padding: 12px 8px 12px 12px;
+  background-color: white;
 }
 
 .shoppers-container__shopping-list {
@@ -20,9 +21,9 @@
 
 .shoppers-container__shopping-list-button {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
-  width: 100px;
+  bottom: 18px;
+  right: 0px;
+  width: 70px;
   display: flex;
   justify-content: center;
   align-self: center;
@@ -36,4 +37,20 @@
 .shoppers-container__shopping-list-button:hover {
   opacity: var(--opacity-hover);
   cursor: pointer;
+}
+
+@media screen and (max-width: 530px) {
+  .shoppers-container__shoppers {
+    right: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 128px;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 12px 8px 12px 12px;
+  }
 }
