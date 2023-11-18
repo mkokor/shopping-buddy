@@ -84,11 +84,11 @@ namespace ShoppingBuddy.DAL.Migrations
                 columns: new[] { "id", "first_name", "image", "last_name" },
                 values: new object[,]
                 {
-                    { 1, "John", "/images/shoppers/placeholder.png", "Doe" },
-                    { 2, "Emily", "/images/shoppers/placeholder.png", "Johnson" },
-                    { 3, "Benjamin", "/images/shoppers/placeholder.png", "Smith" },
-                    { 4, "Ava", "/images/shoppers/placeholder.png", "Williams" },
-                    { 5, "Olivia", "/images/shoppers/placeholder.png", "Davis" }
+                    { 1, "John", "/images/shoppers/john-doe.png", "Doe" },
+                    { 2, "Emily", "/images/shoppers/emily-johnson.png", "Johnson" },
+                    { 3, "Benjamin", "/images/shoppers/benjamin-smith.png", "Smith" },
+                    { 4, "Ava", "/images/shoppers/ava-williams.png", "Williams" },
+                    { 5, "Olivia", "/images/shoppers/olivia-davis.png", "Davis" }
                 });
 
             migrationBuilder.InsertData(

@@ -1,0 +1,45 @@
+.shopper-card-container {
+  width: 120px;
+  height: 128px;
+  display: grid;
+  grid-template-columns: 1;
+  align-items: center;
+  box-shadow: var(--shadow-box-color) 0px 0px 0px 1px;
+  transition: opacity var(--transition-duration);
+  transition: box-shadow var(--transition-duration);
+}
+
+.shopper-card-container:hover {
+  opacity: var(--opacity-hover);
+  cursor: pointer;
+  transition: opacity var(--transition-duration);
+}
+
+.shopper-card-container img {
+  width: 60%;
+}
+
+.shopper-card-container__shopper-name-container {
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.shopper-card-container__image-container,
+.shopper-card-container__shopper-name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#selected {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 2px 1px;
+  transition: opacity var(--transition-duration);
+  transition: shadow-box var(--transition-duration);
+}
+
+#selected:hover {
+  opacity: 1;
+  cursor: default;
+}

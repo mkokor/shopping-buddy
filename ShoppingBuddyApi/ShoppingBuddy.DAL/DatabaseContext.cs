@@ -38,11 +38,11 @@ namespace ShoppingBuddy.DAL
             modelBuilder.Entity<Shopper>()
                 .HasData(new List<Shopper>
                 {
-                    new() { Id = 1, FirstName = "John", LastName = "Doe", Image = "/images/shoppers/placeholder.png" },
-                    new() { Id = 2, FirstName = "Emily", LastName = "Johnson", Image = "/images/shoppers/placeholder.png" },
-                    new() { Id = 3, FirstName = "Benjamin", LastName = "Smith", Image = "/images/shoppers/placeholder.png" },
-                    new() { Id = 4, FirstName = "Ava", LastName = "Williams", Image = "/images/shoppers/placeholder.png" },
-                    new() { Id = 5, FirstName = "Olivia", LastName = "Davis", Image = "/images/shoppers/placeholder.png" }
+                    new() { Id = 1, FirstName = "John", LastName = "Doe", Image = "/images/shoppers/john-doe.png" },
+                    new() { Id = 2, FirstName = "Emily", LastName = "Johnson", Image = "/images/shoppers/emily-johnson.png" },
+                    new() { Id = 3, FirstName = "Benjamin", LastName = "Smith", Image = "/images/shoppers/benjamin-smith.png" },
+                    new() { Id = 4, FirstName = "Ava", LastName = "Williams", Image = "/images/shoppers/ava-williams.png" },
+                    new() { Id = 5, FirstName = "Olivia", LastName = "Davis", Image = "/images/shoppers/olivia-davis.png" }
                 });
             #endregion
 

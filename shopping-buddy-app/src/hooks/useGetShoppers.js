@@ -25,5 +25,5 @@ export const useGetShoppers = () => {
     })();
   }, []);
 
-  return [isLoading, error, shoppers];
+  return [isLoading, error, shoppers, setShoppers];
 };

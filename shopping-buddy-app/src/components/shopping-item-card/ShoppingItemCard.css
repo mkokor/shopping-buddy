@@ -1,0 +1,40 @@
+.shopping-item-card-container {
+  width: 260px;
+  height: 280px;
+  display: grid;
+  grid-template-columns: 1;
+  box-shadow: var(--shadow-box-color) 0px 0px 0px 1px;
+}
+
+.shopping-item-card-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.shopping-item-card-container img {
+  width: 45%;
+}
+
+.shopping-item-card-container__title-container {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.shopping-item-card-container button {
+  background-color: transparent;
+  height: 50px;
+  width: 180px;
+  background-color: #77dd77;
+  border: none;
+  color: white;
+  font-size: 14px;
+  transition: opacity var(--transition-duration);
+}
+
+.shopping-item-card-container button:hover {
+  opacity: var(--opacity-hover);
+  cursor: pointer;
+}

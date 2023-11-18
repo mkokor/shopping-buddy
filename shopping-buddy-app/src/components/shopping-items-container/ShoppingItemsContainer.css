@@ -1,0 +1,54 @@
+.shopping-items-container {
+  margin: 0px 20px 24px 200px;
+}
+
+.shopping-items-container__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 260px);
+  row-gap: 15px;
+  column-gap: 15px;
+  justify-content: center;
+}
+
+.shopping-items-container__search-field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 20px 0px;
+}
+
+.shopping-items-container__search-field input {
+  width: 80%;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 15px;
+  font-weight: 100;
+  outline: none;
+}
+
+.shopping-items-container__search-field input,
+.shopping-items-container__search-field div {
+  height: 45px;
+  border: 2px solid #1d1c1a;
+}
+
+.shopping-items-container__search-field div {
+  background-color: #1d1c1a;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopping-items-container__search-field div img {
+  width: 50%;
+}
+
+@media screen and (min-width: 750px) {
+  .shopping-items-container__search-field input {
+    width: 450px;
+  }
+}

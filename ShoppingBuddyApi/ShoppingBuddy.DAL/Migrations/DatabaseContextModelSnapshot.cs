@@ -49,35 +49,35 @@ namespace ShoppingBuddy.DAL.Migrations
                         {
                             Id = 1,
                             FirstName = "John",
-                            Image = "/images/shoppers/placeholder.png",
+                            Image = "/images/shoppers/john-doe.png",
                             LastName = "Doe"
                         },
                         new
                         {
                             Id = 2,
                             FirstName = "Emily",
-                            Image = "/images/shoppers/placeholder.png",
+                            Image = "/images/shoppers/emily-johnson.png",
                             LastName = "Johnson"
                         },
                         new
                         {
                             Id = 3,
                             FirstName = "Benjamin",
-                            Image = "/images/shoppers/placeholder.png",
+                            Image = "/images/shoppers/benjamin-smith.png",
                             LastName = "Smith"
                         },
                         new
                         {
                             Id = 4,
                             FirstName = "Ava",
-                            Image = "/images/shoppers/placeholder.png",
+                            Image = "/images/shoppers/ava-williams.png",
                             LastName = "Williams"
                         },
                         new
                         {
                             Id = 5,
                             FirstName = "Olivia",
-                            Image = "/images/shoppers/placeholder.png",
+                            Image = "/images/shoppers/olivia-davis.png",
                             LastName = "Davis"
                         });
                 });
