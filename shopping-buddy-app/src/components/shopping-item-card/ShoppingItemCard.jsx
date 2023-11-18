@@ -12,7 +12,29 @@ export const ShoppingItemCard = ({ shoppingItem, shoppers, setShoppers }) => {
     SelectedShopperContext
   );
 
+  const getQuantity = (shoppingItem) => {
+    return shoppers
+      .map((shopper) => shopper.shoppingList)
+      .filter((shoppingList) => shoppingList.length !== 0)
+      .filter(
+        (shoppingList) =>
+          shoppingList.filter((item) => item.id === shoppingItem.id).length !==
+          0
+      ).length;
+  };
+
+  const isAvailable = (shoppingItem) => {
+    if (!selectedShopper) return false;
+    if (
+      selectedShopper.shoppingList.filter((item) => item.id === shoppingItem.id)
+        .length !== 0
+    )
+      return true;
+    return getQuantity(shoppingItem) >= 3 ? false : true;
+  };
+
   const addToShoppingList = async () => {
+    if (!isAvailable(shoppingItem)) return;
     const currentlySelected = selectedShopper;
     const updatedShoppers = await ShoppingApi.addToShoppingList(
       selectedShopper.id,
@@ -23,7 +45,11 @@ export const ShoppingItemCard = ({ shoppingItem, shoppers, setShoppers }) => {
   };
 
   return (
-    <div className={`shopping-item-card-container`}>
+    <div
+      className={`shopping-item-card-container ${
+        !isAvailable(shoppingItem) ? "disabled" : ""
+      }`}
+    >
       <div className="">
         <img
           src={StaticFileApi.createUrl(shoppingItem.image)}

@@ -1,8 +1,9 @@
 import "./ShoppingItemsContainer.css";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import { ShoppingItemCard } from "../shopping-item-card/ShoppingItemCard";
+import { SelectedShopperContext } from "../../contexts/selected-shopper.context";
 
 export const ShoppingItemsContainer = ({
   shoppingItems,
@@ -10,6 +11,7 @@ export const ShoppingItemsContainer = ({
   setShoppers,
 }) => {
   const [searchInput, setSearchInput] = useState("");
+  const { selectedShopper } = useContext(SelectedShopperContext);
 
   const handleInputChange = (input) => {
     setSearchInput(input.target.value);
@@ -39,7 +41,7 @@ export const ShoppingItemsContainer = ({
             <ShoppingItemCard
               key={shoppingItem.id}
               shoppingItem={shoppingItem}
-              shopper={shoppers}
+              shoppers={shoppers}
               setShoppers={setShoppers}
             />
           ) : (

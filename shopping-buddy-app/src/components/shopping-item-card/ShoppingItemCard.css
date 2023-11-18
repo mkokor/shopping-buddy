@@ -38,3 +38,18 @@
   opacity: var(--opacity-hover);
   cursor: pointer;
 }
+
+.disabled,
+.disabled:hover {
+  opacity: 0.5;
+}
+
+.disabled,
+.disabled:hover,
+.disabled button:hover {
+  cursor: default;
+}
+
+.disabled button:hover {
+  opacity: 1;
+}
