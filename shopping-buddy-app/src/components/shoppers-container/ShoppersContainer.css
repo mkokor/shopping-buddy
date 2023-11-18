@@ -1,4 +1,4 @@
-.shopper-container__shoppers {
+.shoppers-container__shoppers {
   position: fixed;
   z-index: 100;
   top: 10px;
@@ -13,7 +13,27 @@
   padding: 12px 8px 12px 12px;
 }
 
-.shopper-container__shopping-list {
+.shoppers-container__shopping-list {
   background-color: blue;
   margin-left: 180px;
+}
+
+.shoppers-container__shopping-list-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  transition: opacity var(--transition-duration);
+}
+
+.shoppers-container__shopping-list-button img {
+  width: 60%;
+}
+
+.shoppers-container__shopping-list-button:hover {
+  opacity: var(--opacity-hover);
+  cursor: pointer;
 }

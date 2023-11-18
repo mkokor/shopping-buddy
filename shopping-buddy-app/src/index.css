@@ -2,7 +2,7 @@
 
 :root {
   --font-base: "Roboto", sans-serif;
-  --color-black-transparent: rgba(12, 12, 12, 0.8);
+  --color-black-pastel: #1d1c1a;
   --shadow-box-color: rgba(0, 0, 0, 0.05);
   --transition-duration: 0.2s;
   --opacity-hover: 0.8;

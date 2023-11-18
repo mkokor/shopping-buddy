@@ -30,11 +30,11 @@
 .shopping-items-container__search-field input,
 .shopping-items-container__search-field div {
   height: 45px;
-  border: 2px solid #1d1c1a;
+  border: 2px solid var(--color-black-pastel);
 }
 
 .shopping-items-container__search-field div {
-  background-color: #1d1c1a;
+  background-color: var(--color-black-pastel);
   padding-top: 1px;
   padding-bottom: 1px;
   width: 50px;

@@ -14,14 +14,17 @@ export const ShoppersContainer = ({ shoppers }) => {
   if (!selectedShopper && shoppers.length > 0) setSelectedShopper(shoppers[0]);
 
   return (
-    <div className="shopper-container">
-      <div className="shopper-container__shoppers">
+    <div className="shoppers-container">
+      <div className="shoppers-container__shoppers">
         {shoppers.map((shopper) => (
           <ShopperCard key={shopper.id} shopper={shopper} />
         ))}
       </div>
+      <div className="shoppers-container__shopping-list-button">
+        <img src="/images/cart.png" />
+      </div>
       {false && (
-        <div className="shopper-container__shopping-list">
+        <div className="shoppers-container__shopping-list">
           {selectedShopper ? (
             <ShoppingList shoppingList={selectedShopper.shoppingList} />
           ) : (

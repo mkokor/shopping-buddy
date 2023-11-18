@@ -34,7 +34,7 @@
 }
 
 #selected {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 2px 1px;
+  box-shadow: var(--color-black-pastel) 0px 0px 0px 1px;
   transition: opacity var(--transition-duration);
   transition: shadow-box var(--transition-duration);
 }
