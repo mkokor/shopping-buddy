@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import { ShoppingItemsApi } from "../apis/shopping-items.api";
 
 export const useGetShoppingItems = () => {
@@ -25,5 +26,5 @@ export const useGetShoppingItems = () => {
     })();
   }, []);
 
-  return [isLoading, error, shoppingItems];
+  return [isLoading, shoppingItems, error];
 };

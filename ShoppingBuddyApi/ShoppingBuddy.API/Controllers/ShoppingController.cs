@@ -22,5 +22,12 @@ namespace ShoppingBuddy.API.Controllers
             var shoppers = await _shoppingService.AddToShoppingList(shopper, shopping_item);
             return Ok(shoppers);
         }
+
+        [HttpDelete("quantity")]
+        public async Task<ActionResult<List<ShopperResponseDto>>> DecreaseQuantity([Required, FromQuery] int shopper, [Required, FromQuery] int shopping_item)
+        {
+            var shoppers = await _shoppingService.DecreaseQuantity(shopper, shopping_item);
+            return Ok(shoppers);
+        }
     }
 }

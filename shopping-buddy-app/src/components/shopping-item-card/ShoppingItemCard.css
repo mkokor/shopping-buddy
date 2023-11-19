@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 1;
   box-shadow: var(--shadow-box-color) 0px 0px 0px 1px;
+  padding-top: 10px;
 }
 
 .shopping-item-card-container div {

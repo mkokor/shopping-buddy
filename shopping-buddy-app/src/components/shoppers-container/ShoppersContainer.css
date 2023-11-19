@@ -1,17 +1,16 @@
 .shoppers-container__shoppers {
   position: fixed;
   z-index: 100;
-  top: 10px;
-  bottom: 10px;
-  left: 10px;
-  display: grid;
-  grid-template-columns: 1;
+  top: 0px;
+  right: 0px;
+  left: 0px;
   gap: 10px;
-  width: 140px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  place-items: center;
   padding: 12px 8px 12px 12px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95);
+  overflow-x: auto;
 }
 
 .shoppers-container__shopping-list {
@@ -21,8 +20,9 @@
 
 .shoppers-container__shopping-list-button {
   position: fixed;
+  z-index: 200;
   bottom: 18px;
-  right: 0px;
+  right: 5px;
   width: 70px;
   display: flex;
   justify-content: center;
@@ -37,20 +37,4 @@
 .shoppers-container__shopping-list-button:hover {
   opacity: var(--opacity-hover);
   cursor: pointer;
-}
-
-@media screen and (max-width: 530px) {
-  .shoppers-container__shoppers {
-    right: 10px;
-    left: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: 128px;
-    width: 100%;
-    overflow-y: hidden;
-    overflow-x: auto;
-    padding: 12px 8px 12px 12px;
-  }
 }

@@ -1,0 +1,19 @@
+.shopping-list-container {
+  display: grid;
+  grid-template-columns: 1;
+  width: 100%;
+}
+
+.shopping-list-container__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.shopping-list-container__items {
+  margin-bottom: 10px;
+}

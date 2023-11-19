@@ -8,5 +8,9 @@ namespace ShoppingBuddy.DAL.Repositories.ShoppingListRepository
         Task<ShoppingListItem> Create(ShoppingListItem shoppingListItem);
 
         Task<List<ShoppingList>> GroupByShopper();
+
+        void Delete(ShoppingListItem item);
+
+        Task<ShoppingListItem?> GetByShopperAndItemId(int shopperId, int itemId);
     }
 }

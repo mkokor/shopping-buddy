@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import { ShoppersApi } from "../apis/shoppers.api";
 
 export const useGetShoppers = () => {
@@ -25,5 +26,5 @@ export const useGetShoppers = () => {
     })();
   }, []);
 
-  return [isLoading, error, shoppers, setShoppers];
+  return [isLoading, shoppers, setShoppers, error];
 };

@@ -56,5 +56,22 @@ namespace ShoppingBuddy.BLL.Services.ShoppingService
 
             return await ShoppersUtility.ConfigureShoppingLists(allShoppers, _unitOfWork, _mapper);
         }
+
+        public async Task<List<ShopperResponseDto>> DecreaseQuantity(int shopperId, int shoppingItemId)
+        {
+            _ = await _unitOfWork.ShopperRepository.GetById(shopperId) ?? throw new NotFoundException("Shopper with provided id could not be found.");
+            _ = await _unitOfWork.ShoppingItemRepository.GetById(shoppingItemId) ?? throw new NotFoundException("Shopping item with provided id could not be found.");
+            var shoppingListItem = await _unitOfWork.ShoppingListItemRepository.GetByShopperAndItemId(shopperId, shoppingItemId);
+
+            if (shoppingListItem != null)
+            {
+                _unitOfWork.ShoppingListItemRepository.Delete(shoppingListItem);
+                await _unitOfWork.SaveAsync();
+            }
+
+            var allShoppers = await _unitOfWork.ShopperRepository.GetAll();
+
+            return await ShoppersUtility.ConfigureShoppingLists(allShoppers, _unitOfWork, _mapper);
+        }
     }
 }

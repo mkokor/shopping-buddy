@@ -1,0 +1,37 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.shopping-list-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopping-list-item-container__decrease-button {
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity var(--transition-duration);
+}
+
+.shopping-list-item-container__decrease-button img {
+  width: 18px;
+}
+
+.shopping-list-container__quantity {
+  margin-right: 25px;
+}
+
+.shopping-list-item-container__decrease-button:hover {
+  cursor: pointer;
+  opacity: var(--opacity-hover);
+}

@@ -1,0 +1,15 @@
+.button {
+  background-color: transparent;
+  height: 50px;
+  padding: 10px 24px 10px 24px;
+  background-color: var(--color-black-pastel);
+  border: none;
+  color: white;
+  font-size: 14px;
+  transition: opacity var(--transition-duration);
+}
+
+.button:hover {
+  opacity: var(--opacity-hover);
+  cursor: pointer;
+}
