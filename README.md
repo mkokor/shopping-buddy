@@ -40,13 +40,40 @@
 
 # About the Project
 <p align="justify">
+This repository contains the source code of a full-stack web application for shopping assistance. The frontend was implemented using React.js, and the backend was implemented using .NET 7.
+The code is divided into 2 main folders: "./ShoppingBuddyApi" (backend) and "./shopping-buddy-app" (frontend).
 </p>
 
 
 ## Demonstration
-  
+
+
+https://github.com/mkokor/shopping-buddy/assets/126569077/0c2b3231-f96f-4e29-ae21-6e1f882e5ebd
+
+
+### Home
 <div align="center">
-  <img src="./screenshots/example.jpg" alt="screen" style="display: inline-block; width: 300px;">
+  <img src="./demonstration/screenshots/home.png" alt="home" style="display: inline-block;">
+</div>
+
+### Search
+<div align="center">
+  <img src="./demonstration/screenshots/searching.png" alt="search" style="display: inline-block;">
+</div>
+
+### Unavailable shopping item
+<div align="center">
+  <img src="./demonstration/screenshots/unavailable-item.png" alt="unavailable_item" style="display: inline-block;">
+</div>
+
+### Success
+<div align="center">
+  <img src="./demonstration/screenshots/success.png" alt="success" style="display: inline-block;">
+</div>
+
+### Shopping list
+<div align="center">
+  <img src="./demonstration/screenshots/shopping-list.png" alt="shopping_list" style="display: inline-block;">
 </div>
 
 
@@ -55,19 +82,49 @@
 Follow the instructions bellow to get local copy up and running.
 </p>
 
+## Prerequisite
+1. Local <a href="https://dev.mysql.com/downloads/mysql/">MySQL</a> server
+2. <a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0">.NET 7 SDK</a>
+3. <a href="https://nodejs.org/en">Node.js</a>
+
 ## Installation
-1. Clone the repository
+1. Clone the repository with the following git cli command
 ```bash
+git clone https://github.com/mkokor/shopping-buddy.git
 ```
-3. Install NPM packages
+2. Get your local <a href="https://dev.mysql.com/downloads/mysql/">MySQL</a> server up and running at port 3306 and make sure to enable following credentials
+```json
+{
+  "user": "root",
+  "password": "password"
+}
+```
+3. Make sure you have installed dotnet-ef tool
+```bash
+dotnet tool install --global dotnet-ef
+```
+4. Run following cli command inside of "./ShoppingBuddyApi/ShoppingBuddy.API" folder to apply database migration
+```bash
+dotnet ef database update
+```
+5. Run following cli command inside of "./shopping-buddy-app" folder install required NPM packages
 ```bash
 npm install
 ```
 
 ## Execution
 <p align="justify">
-Run command below to start the application.
+Run command below inside of "./ShoppingBuddyApi/ShoppingBuddy.API" folder to start the backend.
 </p>
 
 ```bash
+dotnet watch run
+```
+
+<p align="justify">
+Run command below inside of "./shopping-buddy-app" folder to start the frontend
+</p>
+
+```bash
+npm start
 ```
