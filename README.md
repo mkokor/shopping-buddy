@@ -1,7 +1,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/mkokor/shopping-buddy">
-    <img src="./assets/logo.png" alt="Logo" width="200"">
+    <img src="./shopping-buddy-app/public/favicon.ico" alt="logo" width="200"">
   </a>
   <h3 align="center">Shopping Buddy</h3>
   <p align="center">
