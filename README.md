@@ -41,8 +41,11 @@
 # About the Project
 <p align="justify">
 This repository contains the source code of a full-stack web application for shopping assistance. The frontend was implemented using React.js, and the backend was implemented using .NET 7.
-The code is divided into 2 main folders: "./ShoppingBuddyApi" (backend) and "./shopping-buddy-app" (frontend).
+The code is divided into 2 main folders:
 </p>
+
+*  "./ShoppingBuddyApi" - backend;
+*  "./shopping-buddy-app" - frontend.
 
 
 ## Demonstration
@@ -128,3 +131,10 @@ Run command below inside of "./shopping-buddy-app" folder to start the frontend
 ```bash
 npm start
 ```
+
+<p align="justify">
+After startup, application can be accessed on following domains:
+</p>
+
+* http://localhost:5122/swagger/index.html - API Swagger UI;
+* http://localhost:3000/ - application home page.
