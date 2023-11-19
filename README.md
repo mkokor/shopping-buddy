@@ -125,7 +125,7 @@ dotnet watch run
 ```
 
 <p align="justify">
-Run command below inside of "./shopping-buddy-app" folder to start the frontend
+Run command below inside of "./shopping-buddy-app" folder to start the frontend.
 </p>
 
 ```bash
